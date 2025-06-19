@@ -16,15 +16,27 @@
     <link href="./assets/css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="bg-white">
-      <nav
-        class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200"
-      >
+    <nav
+      class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-20 p-4"
+    >
+      <div class="md:mx-10 mx-4">
         <div
-          class="max-w-screen-xl flex items-center justify-between mx-auto p-4"
+          class="max-w-screen-xl flex items-center justify-between mx-auto items-center"
         >
-          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <h1 class="font-bold hover:text-green-700">LOGO</h1>
+          <a
+            href="./index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <div class="flex gap-1 items-center">
+              <img
+                src="./assets/img/HPR_Global_logo.png"
+                class="h-[40px]"
+                alt=""
+              />
+              <h1 class="font-bold hover:text-green-700 md:inline hidden">
+                HPR GLOBAL
+              </h1>
+            </div>
           </a>
           <div
             class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
@@ -98,7 +110,7 @@
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   </body>
 </html>
