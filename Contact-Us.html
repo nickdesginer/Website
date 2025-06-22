@@ -16,104 +16,38 @@
     <title>Contact Us</title>
   </head>
   <body class="bg-white">
-    <header class="bg-white">
-      <nav
-        class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-20 p-4"
-      >
-        <div class="md:mx-10 mx-4">
-          <div
-            class="max-w-screen-xl flex items-center justify-between mx-auto items-center"
-          >
-            <a
-              href="./index.html"
-              class="flex items-center space-x-3 rtl:space-x-reverse"
-            >
-              <div class="flex gap-1 items-center">
-                <img
-                  src="./assets/img/HPR_Global_logo.png"
-                  class="h-[40px]"
-                  alt=""
-                />
-                <h1 class="font-bold hover:text-green-700 md:inline hidden">
-                  HPR GLOBAL
-                </h1>
-              </div>
-            </a>
-            <div
-              class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
-            >
-              <button
-                type="button"
-                class="text-white bg-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-              >
-                Get started
-              </button>
-              <button
-                data-collapse-toggle="navbar-sticky"
-                type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                aria-controls="navbar-sticky"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Open main menu</span>
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 17 14"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 1h15M1 7h15M1 13h15"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-              id="navbar-sticky"
-            >
-              <ul
-                class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
-              >
-                <li>
-                  <a
-                    href="./index.html"
-                    class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="./About-Us.html"
-                    class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="./Blog.html"
-                    class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0"
-                    >Blog</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="./Contact-Us.html"
-                    class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
+    <!---NavBar_Section_Start-->
+    <section>
+      <nav class="bg-white fixed w-full z-20 mx-auto border-b-[0.25px]">
+        <div class="flex items-center font-bold gap-4">
+          <img src="/assets/img/HPR_Global_logo.png" class="h-[50px]" alt="" />
+          <a href="" class="hover:text-[rgb(254,109,37)]">HPR GLOBAL</a>
         </div>
+        <ul id="menuList" class="">
+          <li class="md:pt-0 pt-4"><a href="./Header.htm">Home</a></li>
+          <li><a href="./About-Us.html">About</a></li>
+          <li><a href="./Product.html">Product</a></li>
+          <li><a href="./Blog.html">Blog</a></li>
+          <li><a href="./Contact-Us.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon hover:text-[rgb(254,109,37)]">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <script>
+          let menuList = document.getElementById("menuList");
+          menuList.style.maxHeight = "0px";
+
+          function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+              menuList.style.maxHeight = "300px";
+            } else {
+              menuList.style.maxHeight = "0px";
+            }
+          }
+        </script>
       </nav>
-    </header>
+    </section>
+    <!--NavBar_Section_End-->
     <main class="bg-white">
       <section class="bg-[url(/./assets/img/cu-bi.webp)] bg-cover">
         <div class="section-3 bg-black/30">
@@ -124,7 +58,7 @@
               </h3>
               <!-- <p class="text-white">More Than Business — It’s Our Legacy</p> -->
               <div class="text-[18px]">
-                <a href="./index.html" class="text-white hover:text-yellow-500"
+                <a href="./Header.htm" class="text-white hover:text-yellow-500"
                   >Home</a
                 ><span class="text-white">/Contact Us</span>
               </div>
@@ -138,12 +72,12 @@
             <img
               src="./assets/img/HPR_Global.png"
               alt=""
-              class="md:inline hidden"
+              class="lg:inline hidden"
             />
           </div>
           <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2
-              class="mb-4 text-4xl tracking-tight font-extrabold text-center text-green-900"
+              class="mb-4 text-4xl tracking-tight font-extrabold text-center text-orange-500"
             >
               Contact Us
             </h2>
@@ -198,7 +132,7 @@
               <div class="md:text-left text-center">
                 <button
                   type="submit"
-                  class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-900 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                  class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-orange-600 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
                 >
                   Send message
                 </button>
@@ -208,82 +142,79 @@
         </div>
       </section>
     </main>
-    <footer class="bg-green-800 text-white">
-      <!-- <img src="./assets/img/footer-top.png" alt="" /> -->
-      <div
-        class="grid md:grid-cols-3 max-w-7xl lg:m-auto py-10 md:text-left text-center"
-      >
-        <div class="mx-10 my-4">
-          <h3 class="font-bold md:text-[18px] text-[23px]">Contact Details.</h3>
-          <div class="my-2">
-            <p class="font-semibold">Mr. Ayush Gupta</p>
-            <div class="">
-              <h3 class="hover:text-green-500">+91-9817867808</h3>
-              <h3 class="hover:text-green-500">+91-9654042777</h3>
-            </div>
-          </div>
-          <div class="my-2">
-            <p class="font-semibold">Mr. Ayush Gupta</p>
-            <div class="">
-              <h3 class="hover:text-green-500">+91-9817867808</h3>
-              <!-- <h3>+91-9654042777</h3> -->
-            </div>
-          </div>
-          <div class="my-2">
-            <h3 class="font-semibold">E-Mail Address</h3>
-            <div class="">
-              <p class="hover:text-green-500">hello@gmail.com</p>
-            </div>
-          </div>
-        </div>
-        <div class="mx-10 my-4">
-          <h3 class="font-bold md:text-[18px] text-[23px]">Quick Links</h3>
-          <div class="grid grid-cols-1">
-            <a href="./index.html" class="hover:text-green-500 cursor-pointer">
-              Home
-            </a>
-            <a
-              href="./About-Us.html"
-              class="hover:text-green-500 cursor-pointer"
-            >
-              About Us
-            </a>
-            <a
-              src="./Contact-Us.html"
-              class="hover:text-green-500 cursor-pointer"
-            >
-              Products
-            </a>
-            <a href="#" class="hover:text-green-500 cursor-pointer">
-              Infrastructure
-            </a>
-            <a href="#" class="hover:text-green-500 cursor-pointer">
-              Quality Assurance
-            </a>
-            <a href="#" class="hover:text-green-500 cursor-pointer">
-              Privete Labelling
-            </a>
-            <a href="#" class="hover:text-green-500 cursor-pointer">Blog</a>
-            <a
-              href="./Contact-Us.html"
-              class="hover:text-green-500 cursor-pointer"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-        <div class="mx-10 my-4">
-          <h3 class="font-bold md:text-[18px] text-[23px]">Location</h3>
-          <p>Corporate Office: #1305, Sector-32, Karnal, Haryana- 132001</p>
-          <br />
-          <h3 class="font-bold md:text-[18px] text-[23px]">
-            Manufacturing Unit:
-          </h3>
-          <p>
-            Manufacturing Unit: GK Rice Mill, Major District Road, 147W, Gangoh,
-            Uttar Pradesh 247341
+    <!--Footer-->
+    <footer class="bg-black text-white py-10">
+      <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+        <!-- Left: Contact Info (optional) -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+          <p class="text-gray-300 mb-2">
+            Feel free to get in touch with us. We'd love to hear from you!
+          </p>
+          <p class="text-gray-400 text-sm">Email: support@example.com</p>
+          <p class="text-gray-400 text-sm">Phone: +1 (123) 456-7890</p>
+          <p class="text-gray-400 text-sm">
+            Address: 123 Main Street, City, Country
           </p>
         </div>
+
+        <!-- Right: Contact Form -->
+        <!-- <form class="space-y-4">
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Your Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Message</label>
+            <textarea
+              rows="4"
+              placeholder="Type your message"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded shadow-md transition duration-300"
+          >
+            Send Message
+          </button>
+        </form> -->
+        <div class="md:ml-20">
+          <h3 class="text-2xl font-bold mb-3">Company</h3>
+          <div class="text-gray-300">
+            <p class="text-gray-300 hover:text-white cursor-pointer">Home</p>
+            <p class="text-gray-300 hover:text-white cursor-pointer">
+              About Us
+            </p>
+            <p class="text-gray-300 hover:text-white cursor-pointer">
+              Products
+            </p>
+            <p class="text-gray-300 hover:text-white cursor-pointer">Blog</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="mt-10 text-center text-sm text-gray-500">
+        &copy; 2025 HPR Global. All rights reserved.
       </div>
     </footer>
   </body>

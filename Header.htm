@@ -3,82 +3,513 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>Heqader</title>
 
     <!-- Tailwind CSS v3.4.16 CDN -->
     <script src="./js/tailwindcss3.4.16.js"></script>
     <script src="./js/libCustom.js"></script>
 
+    <!--JavaScript File-->
+    <!-- <script src="./js/JavaScript.js"></script> -->
+
     <!-- Font Awosome Icons -->
-      <!-- <script
-        src="https://kit.fontawesome.com/466870e187.js"
-        crossorigin="anonymous"
-      ></script> -->
+    <script
+      src="https://kit.fontawesome.com/466870e187.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Google Material Icons With Font set -->
     <link href="./assets/css/material-icons.css" rel="stylesheet" />
 
     <!-- Custom Styles -->
     <link href="./assets/css/styles.css" rel="stylesheet" />
+
+    <!--Css-->
+    <style>.fade {
+        transition: opacity 0.8s ease-in-out;
+      }
+      </style>
   </head>
   <body>
-  <!---NavBar_Section_Start-->
-    <!-- <section>
-      <nav class="bg-white max-w-7xl mx-auto border-b-[0.25px]">
+   <!---NavBar_Section_Start-->
+    <section>
+      <nav class="bg-white fixed w-full z-20 mx-auto border-b-[0.25px]">
         <div class="flex items-center font-bold gap-4">
-             <img src="/assets/img/HPR_Global_logo.png" class="h-[50px]" alt="">
-             <a href="" class="hover:text-[rgb(254,109,37)]">HPR GLOBAL</a>
+          <img src="/assets/img/HPR_Global_logo.png" class="h-[50px]" alt="" />
+          <a href="" class="hover:text-[rgb(254,109,37)]">HPR GLOBAL</a>
         </div>
-        <ul id="menuList" class=" font-bold">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Product</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
+        <ul id="menuList" class="">
+          <li class="md:pt-0 pt-4"><a href="./Header.htm">Home</a></li>
+          <li><a href="./About-Us.html">About</a></li>
+          <li><a href="./Product.html">Product</a></li>
+          <li><a href="./Blog.html">Blog</a></li>
+          <li><a href="./Contact-Us.html">Contact</a></li>
         </ul>
         <div class="menu-icon hover:text-[rgb(254,109,37)]">
-            <i class="fa-solid fa-bars " onclick="toggleMenu()"></i>
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
         </div>
-        
-    </nav>
-    <script>
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
+        <script>
+          let menuList = document.getElementById("menuList");
+          menuList.style.maxHeight = "0px";
 
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
-                menuList.style.maxHeight = "300px";
+          function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+              menuList.style.maxHeight = "300px";
+            } else {
+              menuList.style.maxHeight = "0px";
             }
-            else{
-                menuList.style.maxHeight = "0px";
-            }
-        }
-        
-    </script>
-    </section> -->
+          }
+        </script>
+      </nav>
+    </section>
     <!--NavBar_Section_End-->
 
-    <section>
-      <div class="mt-10">
-        <img src="./assets/img/curve_bg.webp" alt="">
-      </div>
-      <div class="bg-[rgb(239,239,239)] p-10">
-        <div class="max-w-7xl m-auto ">
-          <div class="grid md:grid-cols-2 grid-cols-1 items-center">
-            <div class=""><img src="./assets/img/HPR_Global_logo.png" class="md:h-[300px] h-[200px] m-auto" alt=""></div>
-            <div class="my-4 md:text-left text-center"><h3 class="md:text-[45px] text-[25px] font-bold">HPR GLOBAL</h3>
-            <p class="md:text-none text-[14px]">One of the key aspects of the Foodful Future Program is its focus on impact and sustainability. By utilizing climate-smart agricultural technology and best practices in food storage and preservation, GrainPro is able to help reduce food loss.</p></div>
+  <!--Slider_Section_Started-->
+    <div class="">
+      <div class="relative mx-auto overflow-hidden shadow-lg">
+      <div
+        id="slides"
+        class="flex transition-transform duration-150 ease-in-out w-[100%] h-[600px]"
+      >
+        <!-- Slide 1 -->
+        <div class="min-w-full relative md:h-[600px]">
+          <img
+            src="assets/img/rice-farm-1.jpg"
+            alt="Image 1"
+            class="w-full h-[600px] object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-4"
+          >
+            <h2 class="text-2xl font-bold mb-2">Welcome to HPR GLOBAL</h2>
+            <p class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+              pariatur atque!
+            </p>
           </div>
-         <div class="grid md:grid-cols-2 grid-cols-1 items-center">
-            
-            <div class="my-4 md:text-right text-center"><h3 class="md:text-[45px] text-[25px] font-bold">Our Impact to Date</h3>
-            <p class="md:text-none text-[14px]">One of the key aspects of the Foodful Future Program is its focus on impact and sustainability. By utilizing climate-smart agricultural technology and best practices in food storage and preservation, GrainPro is able to help reduce food loss.</p></div>
-              <div class=""><img src="./assets/img/chart.gif" class="md:h-[400px] h-[200px] m-auto" alt=""></div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="min-w-full relative h-[600px]">
+          <img
+            src="assets/img/rice-farm-2.jpg"
+            alt="Image 2"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-4"
+          >
+            <h2 class="text-2xl font-bold mb-2">Heading 2</h2>
+            <p class="text-sm">This is the description for the second slide.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="min-w-full relative h-[600px]">
+          <img
+            src="assets/img/rice-farm-3.jpg"
+            alt="Image 3"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-4"
+          >
+            <h2 class="text-2xl font-bold mb-2">Heading 3</h2>
+            <p class="text-sm">This is the description for the third slide.</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="min-w-full relative h-[600px]">
+          <img
+            src="assets/img/rice-farm-4.jpg"
+            alt="Image 4"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-4"
+          >
+            <h2 class="text-2xl font-bold mb-2">Heading 4</h2>
+            <p class="text-sm">This is the description for the fourth slide.</p>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Navigation Buttons -->
+      <button
+        onclick="prevSlide()"
+        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 text-xl"
+      >
+        &#10094;
+      </button>
+      <button
+        onclick="nextSlide()"
+        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 text-xl"
+      >
+        &#10095;
+      </button>
+
+      <!-- JavaScript Started-->
+    <script>
+      let currentIndex = 0;
+      const slides = document.getElementById("slides");
+      const totalSlides = slides.children.length;
+
+      function updateSlide() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlide();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlide();
+      }
+
+      setInterval(nextSlide, 5000);
+
+    </script>
+    <!-- JavaScript Ended-->
+
+    </div>
+    </div>
+  <!--Slider_Sectiobn_Ended-->
+  <!--Information_Section_Started-->
+    <div class="">
+      <div class="mt-5">
+        <img src="./assets/img/bg-Curve.webp" alt="">
+      </div>
+      <div class="bg-[#eeefee] py-10">
+        <!-- <div class="grid md:grid-cols-2 grid-cols-1 max-w-7xl mx-auto items-center">
+          <div class=""><img src="./assets/img/HPR_Global_logo.png" class="md:h-[200px] h-[100px] mx-auto" alt=""></div>
+          <div class="md:text-left text-center"><h3 class="font-bold md:text-4xl text-lg">HPR GLOBAL</h3></div>
+        </div> -->
+        <div class="max-w-7xl mx-auto">
+          <div class="">
+            <img src="./assets/img/HPR_Global_Logo_bg.png" class="h-[200px] mx-auto" alt="">
+            <div class="md:text-left text-center mx-2">
+              <p class="m-4 text-md lg:text-xl text-gray-600 md:leading-[23px]">One of the key aspects of the Foodful Future Program is its focus on impact and sustainability. By utilizing climate-smart agricultural technology and best practices in food storage and preservation, GrainPro is able to help reduce food loss.
+            </p>
+          </div>
+          </div>
+          <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 grid-cols-1 items-center mx-4">
+              <div class="mx-auto items-right md:ml-20 md:text-left text-center">
+              <h3 class="md:text-3xl lg:text-5xl text-lg  font-bold">Our Impact to Date</h3>
+              <p class="text-gray-800 text-lg">We aim to help users reuse, recycle, or upcycle our solutions to help keep the environment clean for future generations.</p>
+              <div class="my-2 text-white md:flex-rows flex-col">
+                <button class="px-4  bg-orange-500 rounded-2xl my-2">Impact to Date</button>
+                <button class="px-4 bg-orange-500 rounded-2xl">Impact Report 2024</button>
+              </div>
+            </div>
+            <div class="">
+              <img src="./assets/img/chart.gif" class="lg:h-[500px] md:h-[400px] h-[300px] mx-auto" alt="">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--Information_Section_Ended-->
+
+  <!--Slider_Center_Started-->
+  <div
+      class="relative w-full h-64 lg:h-[600px] md:h-[400px] overflow-hidden rounded-none shadow-lg"
+    >
+      <!-- Radio Inputs -->
+      <input
+        type="radio"
+        name="slider"
+        id="slide1"
+        class="hidden peer/slide1"
+        checked
+      />
+      <input
+        type="radio"
+        name="slider"
+        id="slide2"
+        class="hidden peer/slide2"
+      />
+      <input
+        type="radio"
+        name="slider"
+        id="slide3"
+        class="hidden peer/slide3"
+      />
+      <input
+        type="radio"
+        name="slider"
+        id="slide4"
+        class="hidden peer/slide4"
+      />
+
+      <!-- Slides Wrapper -->
+      <div
+        class="flex w-[100%] h-full transition-transform duration-150 ease-in-out peer-checked/slide1:translate-x-0 peer-checked/slide2:-translate-x-[100%] peer-checked/slide3:-translate-x-[200%] peer-checked/slide4:-translate-x-[300%]"
+      >
+        <!-- Slide 1 -->
+        <div class="w-full h-full relative flex-shrink-0">
+          <img
+            src="assets/img/rice-farm-1.jpg"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-4"
+          >
+            <h2 class="text-2xl md:text-4xl font-bold">Slide One Title</h2>
+            <p class="mt-2 max-w-md text-sm md:text-lg">
+              This is the first slide with centered content using Tailwind CSS.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="w-full h-full relative flex-shrink-0">
+          <img
+            src="assets/img/rice-farm-2.jpg"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-4"
+          >
+            <h2 class="text-2xl md:text-4xl font-bold">Second Slide Heading</h2>
+            <p class="mt-2 max-w-md text-sm md:text-lg">
+              Another paragraph for the second slide, also centered properly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="w-full h-full relative flex-shrink-0">
+          <img
+            src="assets/img/rice-farm-3.jpg"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-4"
+          >
+            <h2 class="text-2xl md:text-4xl font-bold">Third Slide Title</h2>
+            <p class="mt-2 max-w-md text-sm md:text-lg">
+              Text for the third slide using Tailwind's utility classes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="w-full h-full relative flex-shrink-0">
+          <img
+            src="assets/img/rice-farm-4.jpg"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-4"
+          >
+            <h2 class="text-2xl md:text-4xl font-bold">Last Slide Title</h2>
+            <p class="mt-2 max-w-md text-sm md:text-lg">
+              Final slide with heading and paragraph, all centered visually.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Radio Button Navigation Dots -->
+      <div
+        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-10"
+      >
+        <label
+          for="slide1"
+          class="w-3 h-3 bg-white border border-gray-400 rounded-full cursor-pointer hover:scale-110 transition"
+        ></label>
+        <label
+          for="slide2"
+          class="w-3 h-3 bg-white border border-gray-400 rounded-full cursor-pointer hover:scale-110 transition"
+        ></label>
+        <label
+          for="slide3"
+          class="w-3 h-3 bg-white border border-gray-400 rounded-full cursor-pointer hover:scale-110 transition"
+        ></label>
+        <label
+          for="slide4"
+          class="w-3 h-3 bg-white border border-gray-400 rounded-full cursor-pointer hover:scale-110 transition"
+        ></label>
+      </div>
+      <script>
+        let count = 1;
+        setInterval(() => {
+          document.getElementById("slide" + count).checked = true;
+          count++;
+          if (count > 4) count = 1;
+        }, 4000);
+      </script>
+    </div>
+    <!-- <img src="./assets/img/border_layout_bottom.webp" alt=""> -->
+  <!--Slider_Center_Ended-->
+
+  <!--Testimonials_start-->
+  <section>
+    <div class="">
+    <img src="./assets/img/stories_top.webp" class="mt-2" alt="">
+  </div>
+<div class="flex justify-center px-2 p-5 pb-10 bg-[#eeefee]">
+    <div
+      id="slider"
+      class="w-full max-w-6xl mx-auto h-auto overflow-hidden relative"
+    >
+      <!-- Slides -->
+      <div
+        class="slide grid md:grid-cols-2 grid-cols-1 items-center gap-6 bg-white rounded-xl shadow-lg p-3 sm:p-6 fade opacity-100 transition-opacity duration-700"
+      >
+        <img
+          src="./assets/img/rice-farm-4.jpg"
+          alt="Slide 1"
+          class="w-full h-auto rounded-lg object-cover"
+        />
+        <div>
+          <p class="text-gray-700">
+            The INVITO green beans arrive in Vancouver in heavy burlap (jute).⁠
+          </p>
+          <h2 class="text-3xl mb-4 text-orange-500">The Roast House</h2>
+          <div class="">
+            <button
+              class="text-orange-500 border-[1px] rounded-2xl border-orange-500 hover:bg-orange-500 hover:text-white px-3 text-sm"
+            >
+              Submit a Testimony
+            </button>
+            <button
+              class="text-orange-500 border-[1px] rounded-2xl border-orange-500 hover:bg-orange-500 hover:text-white px-3 text-sm"
+            >
+              view all
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="slide grid md:grid-cols-2 grid-cols-1 items-center gap-6 bg-white rounded-xl shadow-lg p-6 absolute inset-0 fade opacity-0 transition-opacity duration-700"
+      >
+        <img
+          src="./assets/img/rice-farm-2.jpg"
+          alt="Slide 2"
+          class="w-full h-auto rounded-lg object-cover"
+        />
+        <div>
+          <p class="text-gray-700">Special coffees need special care</p>
+          <h2 class="text-3xl mb-4 text-orange-500">Cafe Patrici</h2>
+          <div class="">
+            <button
+              class="text-orange-500 border-[1px] rounded-2xl border-orange-500 hover:bg-orange-500 hover:text-white px-3 text-sm"
+            >
+              Submit a Testimony
+            </button>
+            <button
+              class="text-orange-500 border-[1px] rounded-2xl border-orange-500 hover:bg-orange-500 hover:text-white px-3 text-sm"
+            >
+              view all
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const slides_2 = document.querySelectorAll(".slide");
+      let index = 0;
+
+      setInterval(() => {
+        slides_2[index].classList.remove("opacity-100");
+        slides_2[index].classList.add("opacity-0");
+
+        index = (index + 1) % slides_2.length;
+
+        slides_2[index].classList.remove("opacity-0");
+        slides_2[index].classList.add("opacity-100");
+      }, 4000);
+    </script>
+  </div>
+    <div class="">
+      <img src="./assets/img/stories_footer.webp" alt="">
+    </div>
+  </section>
+  <!--Testimonials_End-->
+
+  <!--Social_Media_started-->
+  <div class="text-center md:my-20 my-10">
+    <div class="md:text-6xl font-bold">
+      <h3><span class="text-orange-500">Follow Us</span> on our Socials!</h3>
+    </div>
+    <div class="md:my-5 my-2.5 md:text-7xl flex justify-center md:gap-5 gap-0">
+      <i class="fa-brands fa-facebook-f text-orange-550 cursor-pointer hover:text-orange-500 mx-1"></i>
+      <i class="fa-brands fa-instagram text-orange-550 cursor-pointer hover:text-orange-500 mx-1"></i>
+      <i class="fa-brands fa-x-twitter text-orange-550 cursor-pointer hover:text-orange-500 mx-1"></i>
+      <i class="fa-brands fa-linkedin-in text-orange-550 cursor-pointer hover:text-orange-500 mx-1"></i>
+    </div>
+  </div>
+  <!--Social_Media_Ended-->
+
+  <!--Footer-->
+  <footer class="bg-black text-white py-10">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+        <!-- Left: Contact Info (optional) -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+          <p class="text-gray-300 mb-2">
+            Feel free to get in touch with us. We'd love to hear from you!
+          </p>
+          <p class="text-gray-400 text-sm">Email: support@example.com</p>
+          <p class="text-gray-400 text-sm">Phone: +1 (123) 456-7890</p>
+          <p class="text-gray-400 text-sm">
+            Address: 123 Main Street, City, Country
+          </p>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Your Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Message</label>
+            <textarea
+              rows="4"
+              placeholder="Type your message"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded shadow-md transition duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="mt-10 text-center text-sm text-gray-500">
+        &copy; 2025 HPR Global. All rights reserved.
+      </div>
+    </footer>
 </body>
 </html>
 </html>
