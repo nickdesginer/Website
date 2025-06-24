@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog-2</title>
+
+    <!-- Tailwind CSS v3.4.16 CDN -->
+    <script src="./js/tailwindcss3.4.16.js"></script>
+    <script src="./js/libCustom.js"></script>
+
+    <!--JavaScript File-->
+    <!-- <script src="./js/JavaScript.js"></script> -->
+
+    <!-- Font Awosome Icons -->
+    <script
+      src="https://kit.fontawesome.com/466870e187.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Material Icons With Font set -->
+    <link href="./assets/css/material-icons.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white">
+    <!---NavBar_Section_Start-->
+    <section>
+      <nav class="bg-white fixed w-full my-0 z-20 mx-auto border-b-[0.25px]">
+        <div class="flex items-center font-bold gap-4">
+          <img
+            src="/assets/img/HPR_Global_logo.png"
+            href="./index.html"
+            class="h-[50px]"
+            alt=""
+          />
+          <a href="./index.html" class="hover:text-[rgb(254,109,37)]"
+            >HPR GLOBAL</a
+          >
+        </div>
+        <ul id="menuList" class="">
+          <li class="md:pt-0 pt-4"><a href="./index.html">Home</a></li>
+          <li><a href="./About-Us.html">About</a></li>
+          <li><a href="./Product.html">Product</a></li>
+          <li><a href="./Blog.html">Blog</a></li>
+          <li><a href="./Contact-Us.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon hover:text-[rgb(254,109,37)]">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <script>
+          let menuList = document.getElementById("menuList");
+          menuList.style.maxHeight = "0px";
+
+          function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+              menuList.style.maxHeight = "300px";
+            } else {
+              menuList.style.maxHeight = "0px";
+            }
+          }
+        </script>
+      </nav>
+    </section>
+    <!--NavBar_Section_End-->
+
+    <!-- Blog Container -->
+    <main class="">
+      <div class="max-w-7xl mx-auto px-4 py-20 grid lg:grid-cols-3 gap-10">
+        <!-- Main Blog Content -->
+        <div class="lg:col-span-2">
+          <!-- Featured Image -->
+          <img
+            src="assets/img/rice-farm-2.jpg"
+            alt="Blog Cover"
+            class="w-full rounded-lg mb-6"
+          />
+
+          <!-- Blog Title -->
+          <h1 class="text-3xl text-orange-500 font-bold mb-4">
+            Signs You've Found A Quality Rice Exporter In India
+          </h1>
+
+          <!-- Author / Category (optional) -->
+          <div class="text-sm text-orange-400 mb-4">
+            By <strong>BI Agri Foods</strong>
+          </div>
+
+          <!-- Blog Content -->
+          <div class="space-y-6 text-justify text-[17px] leading-relaxed">
+            <p>
+              Sourcing rice from India—one of the top producers of Basmati and
+              Non-Basmati rice—can feel like standing in front of an endless
+              shelf. Plenty of exporters advertise tempting prices and quick
+              shipments, so what steps can you take to confirm that a supplier
+              will actually deliver?
+            </p>
+
+            <h2 class="text-xl text-orange-600 font-semibold mt-6">
+              Understanding The Indian Rice Export Market
+            </h2>
+            <p>
+              India’s rice sector is big, growing, and competitive. It sits at
+              the heart of a world-trade engine. India ships grain to more than
+              100 destinations...
+            </p>
+
+            <h2 class="text-xl text-orange-600 font-semibold mt-6">
+              Key Indicators Of A Reliable Rice Exporter
+            </h2>
+            <p>
+              Let’s look at the habits that most reliable exporters have. These
+              include strict quality control, certifications, and honest
+              communication...
+            </p>
+
+            <h2 class="text-xl font-semibold text-orange-600 mt-6">
+              Consistent Product Quality
+            </h2>
+            <p>
+              Arguably the clearest, most important clue is seeing the same high
+              quality each time a shipment lands. From grain length and aroma to
+              taste and shelf life...
+            </p>
+          </div>
+        </div>
+
+        <!-- Sidebar: Latest Blog -->
+        <aside class="bg-gray-100 rounded-lg p-4 h-fit">
+          <h3 class="text-lg font-bold mb-4 border-b pb-2">Latest Blog</h3>
+          <ul class="space-y-2 text-orange-500">
+            <li>
+              <a href="#" class="hover:underline"
+                >Benefits Of Partnering With Rice Exporters In India</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline"
+                >Exploring The Leading Basmati Rice Manufacturers</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline"
+                >How Are Rice Exporters Meeting Global Demand?</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline"
+                >How To Import From The Best Manufacturers?</a
+              >
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer class="bg-black text-white py-10">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+        <!-- Left: Contact Info (optional) -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+          <p class="text-gray-300 mb-2">
+            Feel free to get in touch with us. We'd love to hear from you!
+          </p>
+          <p class="text-gray-400 text-sm">Email: support@example.com</p>
+          <p class="text-gray-400 text-sm">Phone: +1 (123) 456-7890</p>
+          <p class="text-gray-400 text-sm">
+            Address: 123 Main Street, City, Country
+          </p>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Your Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Message</label>
+            <textarea
+              rows="4"
+              placeholder="Type your message"
+              class="w-full p-2 rounded bg-black border border-orange-700/35 text-white focus:outline-none focus:ring-2 focus:ring-orange-600/50"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded shadow-md transition duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="mt-10 text-center text-sm text-gray-500">
+        &copy; 2025 HPR Global. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
