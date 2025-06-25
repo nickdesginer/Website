@@ -29,13 +29,12 @@
     <section>
       <nav class="bg-white fixed w-full z-20 mx-auto border-b-[0.25px]">
         <div class="flex items-center font-bold gap-4">
-          <a href="/"
-            ><img
-              src="/assets/img/HPR_Global_logo.png"
-              href=""
-              class="h-[50px]"
-              alt=""
-          /></a>
+          <img
+            src="/assets/img/HPR_Global_logo.png"
+            href="./index.html"
+            class="h-[50px]"
+            alt=""
+          />
           <a href="./index.html" class="hover:text-[rgb(254,109,37)]"
             >HPR GLOBAL</a
           >
@@ -84,6 +83,7 @@
 
         <!-- Right: Contact Form -->
         <form class="space-y-4">
+          <!-- Name -->
           <div>
             <label class="block text-sm text-gray-300 mb-1">Your Name</label>
             <input
@@ -94,6 +94,7 @@
             />
           </div>
 
+          <!-- Email -->
           <div>
             <label class="block text-sm text-gray-300 mb-1">Email</label>
             <input
@@ -104,6 +105,7 @@
             />
           </div>
 
+          <!-- Message -->
           <div>
             <label class="block text-sm text-gray-300 mb-1">Message</label>
             <textarea
@@ -114,6 +116,16 @@
             ></textarea>
           </div>
 
+          <!-- Attach File -->
+          <div>
+            <label class="block text-sm text-gray-300 mb-1">Attach File</label>
+            <input
+              type="file"
+              class="block w-full text-sm text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-orange-600 file:text-white hover:file:bg-orange-700 bg-black border border-orange-700/35 rounded"
+            />
+          </div>
+
+          <!-- Submit -->
           <button
             type="submit"
             class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded shadow-md transition duration-300"

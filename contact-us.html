@@ -21,51 +21,193 @@
     <!-- Google Material Icons With Font set -->
     <link href="./assets/css/material-icons.css" rel="stylesheet" />
 
-    <!-- Custom Styles -->
-    <link href="./assets/css/styles.css" rel="stylesheet" />
-
     <!--Css-->
     <title>Contact Us</title>
   </head>
   <body class="bg-white">
     <!---NavBar_Section_Start-->
     <section>
-      <nav class="bg-white fixed w-full z-20 mx-auto border-b-[0.25px]">
-        <div class="flex items-center font-bold gap-4">
-          <a href="/"
-            ><img
-              src="/assets/img/HPR_Global_logo.png"
-              href=""
-              class="h-[50px]"
+      <nav class="bg-white shadow-md fixed w-full z-50">
+        <div
+          class="mx-auto px-6 py-3 flex lg:justify-evenly justify-between items-center"
+        >
+          <div
+            class="text-lg hover:text-orange-600 cursor-pointer flex items-center gap-2 font-bold"
+          >
+            <div class=""></div>
+            <img
+              src="./assets/img/HPR_Global_logo.png"
+              class="h-[40px]"
               alt=""
-          /></a>
-          <a href="./index.html" class="hover:text-[rgb(254,109,37)]"
-            >HPR GLOBAL</a
+            />
+            <h3>HPR GLOBAL</h3>
+          </div>
+
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex space-x-6 font-medium items-center">
+            <li><a href="/" class="hover:text-orange-500">Home</a></li>
+            <li>
+              <a href="./about-us.html" class="hover:text-orange-500">About</a>
+            </li>
+
+            <!-- Dropdown Button -->
+            <li class="relative">
+              <button
+                onclick="toggleDropdown()"
+                class="flex items-center gap-1 hover:text-orange-500"
+              >
+                Products <i class="fas fa-chevron-down text-sm"></i>
+              </button>
+              <ul
+                id="desktopDropdown"
+                class="absolute left-0 top-full mt-2 w-40 bg-white border rounded shadow-md hidden z-10"
+              >
+                <li>
+                  <a
+                    href="./product_1.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Rice</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./product_2.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Grain</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./product_3.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Spices</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./product_3.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Coconut</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./blog.html" class="hover:text-orange-500"
+                >Certification</a
+              >
+            </li>
+            <li>
+              <a href="./blog.html" class="hover:text-orange-500">Blog</a>
+            </li>
+            <li>
+              <a href="./contact-us.html" class="hover:text-orange-500"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Hamburger Icon -->
+          <div class="md:hidden">
+            <button onclick="toggleMenu()">
+              <i class="fas fa-bars text-2xl hover:text-orange-500"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu with Transition -->
+        <div
+          id="mobileMenu"
+          class="overflow-hidden max-h-0 transition-all text-center duration-300 ease-in-out md:hidden bg-white px-4"
+        >
+          <a href="/" class="block py-2 hover:text-orange-500">Home</a>
+          <a href="./about-us.html" class="block py-2 hover:text-orange-500"
+            >About</a
+          >
+
+          <!-- Mobile Services Dropdown -->
+          <div>
+            <button
+              onclick="toggleSubMenu()"
+              class="w-full flex justify-center items-center py-2 hover:text-orange-500"
+            >
+              Products <i class="fas fa-chevron-down ml-2"></i>
+            </button>
+            <div
+              id="subMenu"
+              class="hidden text-center bg-gray-300/10 rounded-xl space-y-1"
+            >
+              <a
+                href="./product_1.html"
+                class="block py-1 hover:text-orange-500"
+                >Rice</a
+              >
+              <a
+                href="./product_2.html"
+                class="block py-1 hover:text-orange-500"
+                >Grain</a
+              >
+              <a
+                href="./product_3.html"
+                class="block py-1 hover:text-orange-500"
+                >Spices</a
+              >
+              <a
+                href="./product_3.html"
+                class="block py-1 hover:text-orange-500"
+                >Coconut</a
+              >
+            </div>
+          </div>
+
+          <a href="./blog.html" class="block py-2 hover:text-orange-500"
+            >Certification</a
+          >
+          <a href="./blog.html" class="block py-2 hover:text-orange-500"
+            >Blog</a
+          >
+          <a href="./contact-us.html" class="block py-2 hover:text-orange-500"
+            >Contact</a
           >
         </div>
-        <ul id="menuList" class="">
-          <li class="md:pt-0 pt-4"><a href="/">Home</a></li>
-          <li><a href="./about-us.html">About</a></li>
-          <li><a href="./product.html">Product</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./contact-us.html">Contact</a></li>
-        </ul>
-        <div class="menu-icon hover:text-[rgb(254,109,37)]">
-          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-        </div>
-        <script>
-          let menuList = document.getElementById("menuList");
-          menuList.style.maxHeight = "0px";
-
-          function toggleMenu() {
-            if (menuList.style.maxHeight == "0px") {
-              menuList.style.maxHeight = "300px";
-            } else {
-              menuList.style.maxHeight = "0px";
-            }
-          }
-        </script>
       </nav>
+      <script>
+        const mobileMenu = document.getElementById("mobileMenu");
+        const subMenu = document.getElementById("subMenu");
+        const desktopDropdown = document.getElementById("desktopDropdown");
+
+        let isMobileOpen = false;
+
+        function toggleMenu() {
+          isMobileOpen = !isMobileOpen;
+          if (isMobileOpen) {
+            mobileMenu.classList.remove("max-h-0");
+            mobileMenu.classList.add("max-h-screen");
+          } else {
+            mobileMenu.classList.remove("max-h-screen");
+            mobileMenu.classList.add("max-h-0");
+          }
+        }
+
+        function toggleDropdown() {
+          desktopDropdown.classList.toggle("hidden");
+        }
+
+        function toggleSubMenu() {
+          subMenu.classList.toggle("hidden");
+        }
+
+        // Optional: close desktop dropdown when clicking outside
+        document.addEventListener("click", function (e) {
+          const isDropdownBtn = e.target.closest(
+            "button[onclick='toggleDropdown()']"
+          );
+          if (!isDropdownBtn && !desktopDropdown.contains(e.target)) {
+            desktopDropdown.classList.add("hidden");
+          }
+        });
+      </script>
     </section>
     <!--NavBar_Section_End-->
     <main class="bg-white">
@@ -108,12 +250,14 @@
               Need details about our Business plan? Let us know.
             </p>
             <form action="#" class="space-y-8">
+              <!-- Email -->
               <div>
                 <label
                   for="email"
                   class="block mb-2 text-sm font-medium text-gray-900"
-                  >Your email*</label
                 >
+                  Your email*
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -122,12 +266,15 @@
                   required
                 />
               </div>
+
+              <!-- Subject -->
               <div>
                 <label
                   for="subject"
                   class="block mb-2 text-sm font-medium text-gray-900"
-                  >Subject</label
                 >
+                  Subject
+                </label>
                 <input
                   type="text"
                   id="subject"
@@ -136,12 +283,15 @@
                   required
                 />
               </div>
+
+              <!-- Message -->
               <div class="sm:col-span-2">
                 <label
                   for="message"
                   class="block mb-2 text-sm font-medium text-gray-900"
-                  >Your message</label
                 >
+                  Your message
+                </label>
                 <textarea
                   id="message"
                   rows="6"
@@ -149,10 +299,27 @@
                   placeholder="Leave a comment..."
                 ></textarea>
               </div>
+
+              <!-- Attach File -->
+              <div>
+                <label
+                  for="file"
+                  class="block mb-2 text-sm font-medium text-gray-900"
+                >
+                  Attach a file (optional)
+                </label>
+                <input
+                  type="file"
+                  id="file"
+                  class="block w-full text-sm text-gray-500 bg-gray-50 border border-gray-300 rounded-lg cursor-pointer focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-orange-600 file:text-white hover:file:bg-orange-700"
+                />
+              </div>
+
+              <!-- Submit Button -->
               <div class="md:text-left text-center">
                 <button
                   type="submit"
-                  class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-orange-600 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                  class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-orange-600 sm:w-fit hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300"
                 >
                   Send message
                 </button>
@@ -162,6 +329,16 @@
         </div>
       </section>
     </main>
+    <button
+      onclick="handleFixedButtonClick()"
+      class="fixed bottom-6 right-6 z-50 bg-orange-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-orange-700 transition duration-300"
+    >
+      <a href=""
+        ><i
+          class="fa-brands fa-whatsapp text-orange-550 cursor-pointer mx-1"
+        ></i
+      ></a>
+    </button>
     <!--Footer-->
     <footer class="bg-black text-white py-10">
       <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8">
@@ -171,11 +348,14 @@
           <p class="text-gray-300 mb-2">
             Feel free to get in touch with us. We'd love to hear from you!
           </p>
-          <p class="text-gray-400 text-sm">Email: support@example.com</p>
-          <p class="text-gray-400 text-sm">Phone: +1 (123) 456-7890</p>
-          <p class="text-gray-400 text-sm">
-            Address: 123 Main Street, City, Country
-          </p>
+          <p class="text-gray-400 text-sm">Email: hprglobal06@gmail.com</p>
+          <p class="text-gray-400 text-sm">Phone: +91 9664543116</p>
+          <p class="text-gray-400 text-sm">Address: Surat, Gujarat</p>
+          <!-- <div class="mt-4"> 
+          <p class="text-gray-300 text-sm">Jay Kothavade</p>
+          <p class="text-gray-300 text-sm">Jay Khorasiya</p>
+          <p class="text-gray-300 text-sm">Gautam Bhimani</p>
+          </div> -->
         </div>
 
         <!-- Right: Contact Form -->
