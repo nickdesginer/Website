@@ -35,7 +35,7 @@
     <section>
       <nav class="bg-white fixed w-full z-20 mx-auto border-b-[0.25px]">
         <div class="flex items-center font-bold gap-4">
-          <img src="/assets/img/HPR_Global_logo.png" href="./index.html" class="h-[50px]" alt="" />
+          <a href="/"><img src="/assets/img/HPR_Global_logo.png" href="" class="h-[50px]" alt="" /></a>
           <a href="./index.html" class="hover:text-[rgb(254,109,37)]">HPR GLOBAL</a>
         </div>
         <ul id="menuList" class="">
@@ -69,7 +69,7 @@
       <div class="relative mx-auto overflow-hidden shadow-lg">
       <div
         id="slides"
-        class="flex transition-transform duration-150 ease-in-out w-[100%] h-[600px]"
+        class="flex transition-transform duration-400 ease-in-out w-[100%] h-[600px]"
       >
         <!-- Slide 1 -->
         <div class="min-w-full relative md:h-[600px]">
@@ -169,7 +169,7 @@
         updateSlide();
       }
 
-      setInterval(nextSlide, 5000);
+      setInterval(nextSlide, 2000);
 
     </script>
     <!-- JavaScript Ended-->
@@ -248,7 +248,7 @@
 
       <!-- Slides Wrapper -->
       <div
-        class="flex w-[100%] h-full transition-transform duration-150 ease-in-out peer-checked/slide1:translate-x-0 peer-checked/slide2:-translate-x-[100%] peer-checked/slide3:-translate-x-[200%] peer-checked/slide4:-translate-x-[300%]"
+        class="flex w-[100%] h-full transition-transform duration-400 ease-in-out peer-checked/slide1:translate-x-0 peer-checked/slide2:-translate-x-[100%] peer-checked/slide3:-translate-x-[200%] peer-checked/slide4:-translate-x-[300%]"
       >
         <!-- Slide 1 -->
         <div class="w-full h-full relative flex-shrink-0">
@@ -342,7 +342,7 @@
           document.getElementById("slide" + count).checked = true;
           count++;
           if (count > 4) count = 1;
-        }, 4000);
+        }, 2000);
       </script>
     </div>
     <!-- <img src="./assets/img/border_layout_bottom.webp" alt=""> -->
@@ -425,7 +425,7 @@
 
         slides_2[index].classList.remove("opacity-0");
         slides_2[index].classList.add("opacity-100");
-      }, 4000);
+      }, 3000);
     </script>
   </div>
     <div class="-mt-1">
