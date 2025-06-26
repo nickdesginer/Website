@@ -1,0 +1,67 @@
+<div class="flex justify-center px-2 p-5 pb-10 bg-[#eeefee]">
+  <div
+    id="slider"
+    class="w-full max-w-6xl mx-auto h-auto overflow-hidden relative"
+  >
+    <!-- Slides -->
+    <div
+      class="slide grid md:grid-cols-2 grid-cols-1 items-center gap-6 bg-white rounded-xl shadow-lg p-3 sm:p-6 fade opacity-100 transition-opacity duration-700"
+    >
+      <img
+        src="./assets/img/rice-farm-4.jpg"
+        alt="Slide 1"
+        class="w-full h-auto rounded-lg object-cover"
+      />
+      <div>
+        <p class="text-gray-700">
+          The INVITO green beans arrive in Vancouver in heavy burlap (jute).⁠
+        </p>
+        <h2 class="text-3xl mb-4 text-orange-500">The Roast House</h2>
+        <div class="">
+          <button
+            class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
+            href="./Contact-Us.html"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="slide grid md:grid-cols-2 grid-cols-1 items-center gap-6 bg-white rounded-xl shadow-lg p-6 absolute inset-0 fade opacity-0 transition-opacity duration-700"
+    >
+      <img
+        src="./assets/img/rice-farm-2.jpg"
+        alt="Slide 2"
+        class="w-full h-auto rounded-lg object-cover"
+      />
+      <div>
+        <p class="text-gray-700">Special coffees need special care</p>
+        <h2 class="text-3xl mb-4 text-orange-500">Cafe Patrici</h2>
+        <div class="">
+          <button
+            class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
+            href="./Contact-Us.html"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const slides_2 = document.querySelectorAll(".slide");
+    let index = 0;
+
+    setInterval(() => {
+      slides_2[index].classList.remove("opacity-100");
+      slides_2[index].classList.add("opacity-0");
+
+      index = (index + 1) % slides_2.length;
+
+      slides_2[index].classList.remove("opacity-0");
+      slides_2[index].classList.add("opacity-100");
+    }, 1500);
+  </script>
+</div>

@@ -33,165 +33,187 @@
   <body>
    <!---NavBar_Section_Start-->
     <section>
-     <nav class="bg-white shadow-md fixed w-full z-50">
-      <div
-        class="mx-auto px-6 py-3 flex lg:justify-evenly justify-between items-center"
-      >
+      <nav class="bg-white shadow-md fixed w-full z-50">
         <div
-          class="text-lg hover:text-orange-600 cursor-pointer flex items-center gap-2 font-bold"
+          class="mx-auto px-6 py-3 flex lg:justify-evenly justify-between items-center"
         >
-          <div class=""></div>
-          <img src="./assets/img/HPR_Global_logo.png" class="h-[40px]" alt="" />
-          <h3>HPR GLOBAL</h3>
-        </div>
-
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex space-x-6 font-medium items-center">
-          <li><a href="/" class="hover:text-orange-500">Home</a></li>
-          <li>
-            <a href="./about-us.html" class="hover:text-orange-500">About</a>
-          </li>
-
-          <!-- Dropdown Button -->
-          <li class="relative">
-            <button
-              onclick="toggleDropdown()"
-              class="flex items-center gap-1 hover:text-orange-500"
-            >
-              Products <i class="fas fa-chevron-down text-sm"></i>
-            </button>
-            <ul
-              id="desktopDropdown"
-              class="absolute left-0 top-full mt-2 w-40 bg-white border rounded shadow-md hidden z-10"
-            >
-              <li>
-                <a
-                  href="./product_1.html"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Rice</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./product_2.html"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Grain</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./product_3.html"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Spices</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./product_3.html"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Coconut</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li><a href="./blog.html" class="hover:text-orange-500">Certification</a></li>
-          <li><a href="./blog.html" class="hover:text-orange-500">Blog</a></li>
-          <li>
-            <a href="./contact-us.html" class="hover:text-orange-500"
-              >Contact</a
-            >
-          </li>
-        </ul>
-
-        <!-- Hamburger Icon -->
-        <div class="md:hidden">
-          <button onclick="toggleMenu()">
-            <i class="fas fa-bars text-2xl hover:text-orange-500"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu with Transition -->
-      <div
-        id="mobileMenu"
-        class="overflow-hidden max-h-0 transition-all text-center duration-300 ease-in-out md:hidden bg-white px-4"
-      >
-        <a href="/" class="block py-2 hover:text-orange-500">Home</a>
-        <a href="./about-us.html" class="block py-2 hover:text-orange-500"
-          >About</a
-        >
-
-        <!-- Mobile Services Dropdown -->
-        <div>
-          <button
-            onclick="toggleSubMenu()"
-            class="w-full flex justify-center items-center py-2 hover:text-orange-500"
-          >
-            Products <i class="fas fa-chevron-down ml-2"></i>
-          </button>
           <div
-            id="subMenu"
-            class="hidden text-center bg-gray-300/10 rounded-xl space-y-1"
+            class="text-lg hover:text-orange-600 cursor-pointer flex items-center gap-2 font-bold"
           >
-            <a href="./product_1.html" class="block py-1 hover:text-orange-500"
-              >Rice</a
-            >
-            <a href="./product_2.html" class="block py-1 hover:text-orange-500"
-              >Grain</a
-            >
-            <a href="./product_3.html" class="block py-1 hover:text-orange-500"
-              >Spices</a
-            >
-            <a href="./product_3.html" class="block py-1 hover:text-orange-500"
-              >Coconut</a
-            >
+            <div class=""></div>
+            <img
+              src="./assets/img/HPR_Global_logo.png"
+              class="h-[40px]"
+              alt=""
+            />
+            <h3>HPR GLOBAL</h3>
+          </div>
+
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex space-x-6 font-medium items-center">
+            <li><a href="/" class="hover:text-orange-500">Home</a></li>
+            <li>
+              <a href="./about-us.html" class="hover:text-orange-500">About</a>
+            </li>
+
+            <!-- Dropdown Button -->
+            <li class="relative">
+              <button
+                onclick="toggleDropdown()"
+                class="flex items-center gap-1 hover:text-orange-500"
+              >
+                Products <i class="fas fa-chevron-down text-sm"></i>
+              </button>
+              <ul
+                id="desktopDropdown"
+                class="absolute left-0 top-full mt-2 w-40 bg-white border rounded shadow-md hidden z-10"
+              >
+                <li>
+                  <a
+                    href="./product_1.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Rice</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./product_2.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Grain</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./product_3.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Spices</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./product_4.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Coconut</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./blog.html" class="hover:text-orange-500"
+                >Certification</a
+              >
+            </li>
+            <li>
+              <a href="./blog.html" class="hover:text-orange-500">Blog</a>
+            </li>
+            <li>
+              <a href="./contact-us.html" class="hover:text-orange-500"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Hamburger Icon -->
+          <div class="md:hidden">
+            <button onclick="toggleMenu()">
+              <i class="fas fa-bars text-2xl hover:text-orange-500"></i>
+            </button>
           </div>
         </div>
 
-        <a href="./blog.html" class="block py-2 hover:text-orange-500">Certification</a>
-        <a href="./blog.html" class="block py-2 hover:text-orange-500">Blog</a>
-        <a href="./contact-us.html" class="block py-2 hover:text-orange-500"
-          >Contact</a
+        <!-- Mobile Menu with Transition -->
+        <div
+          id="mobileMenu"
+          class="overflow-hidden max-h-0 transition-all text-center duration-300 ease-in-out md:hidden bg-white px-4"
         >
-      </div>
-    </nav>
-    <script>
-      const mobileMenu = document.getElementById("mobileMenu");
-      const subMenu = document.getElementById("subMenu");
-      const desktopDropdown = document.getElementById("desktopDropdown");
+          <a href="/" class="block py-2 hover:text-orange-500">Home</a>
+          <a href="./about-us.html" class="block py-2 hover:text-orange-500"
+            >About</a
+          >
 
-      let isMobileOpen = false;
+          <!-- Mobile Services Dropdown -->
+          <div>
+            <button
+              onclick="toggleSubMenu()"
+              class="w-full flex justify-center items-center py-2 hover:text-orange-500"
+            >
+              Products <i class="fas fa-chevron-down ml-2"></i>
+            </button>
+            <div
+              id="subMenu"
+              class="hidden text-center bg-gray-300/10 rounded-xl space-y-1"
+            >
+              <a
+                href="./product_1.html"
+                class="block py-1 hover:text-orange-500"
+                >Rice</a
+              >
+              <a
+                href="./product_2.html"
+                class="block py-1 hover:text-orange-500"
+                >Grain</a
+              >
+              <a
+                href="./product_3.html"
+                class="block py-1 hover:text-orange-500"
+                >Spices</a
+              >
+              <a
+                href="./product_4.html"
+                class="block py-1 hover:text-orange-500"
+                >Coconut</a
+              >
+            </div>
+          </div>
 
-      function toggleMenu() {
-        isMobileOpen = !isMobileOpen;
-        if (isMobileOpen) {
-          mobileMenu.classList.remove("max-h-0");
-          mobileMenu.classList.add("max-h-screen");
-        } else {
-          mobileMenu.classList.remove("max-h-screen");
-          mobileMenu.classList.add("max-h-0");
+          <a href="./blog.html" class="block py-2 hover:text-orange-500"
+            >Certification</a
+          >
+          <a href="./blog.html" class="block py-2 hover:text-orange-500"
+            >Blog</a
+          >
+          <a href="./contact-us.html" class="block py-2 hover:text-orange-500"
+            >Contact</a
+          >
+        </div>
+      </nav>
+      <script>
+        const mobileMenu = document.getElementById("mobileMenu");
+        const subMenu = document.getElementById("subMenu");
+        const desktopDropdown = document.getElementById("desktopDropdown");
+
+        let isMobileOpen = false;
+
+        function toggleMenu() {
+          isMobileOpen = !isMobileOpen;
+          if (isMobileOpen) {
+            mobileMenu.classList.remove("max-h-0");
+            mobileMenu.classList.add("max-h-screen");
+          } else {
+            mobileMenu.classList.remove("max-h-screen");
+            mobileMenu.classList.add("max-h-0");
+          }
         }
-      }
 
-      function toggleDropdown() {
-        desktopDropdown.classList.toggle("hidden");
-      }
-
-      function toggleSubMenu() {
-        subMenu.classList.toggle("hidden");
-      }
-
-      // Optional: close desktop dropdown when clicking outside
-      document.addEventListener("click", function (e) {
-        const isDropdownBtn = e.target.closest(
-          "button[onclick='toggleDropdown()']"
-        );
-        if (!isDropdownBtn && !desktopDropdown.contains(e.target)) {
-          desktopDropdown.classList.add("hidden");
+        function toggleDropdown() {
+          desktopDropdown.classList.toggle("hidden");
         }
-      });
-    </script>
+
+        function toggleSubMenu() {
+          subMenu.classList.toggle("hidden");
+        }
+
+        // Optional: close desktop dropdown when clicking outside
+        document.addEventListener("click", function (e) {
+          const isDropdownBtn = e.target.closest(
+            "button[onclick='toggleDropdown()']"
+          );
+          if (!isDropdownBtn && !desktopDropdown.contains(e.target)) {
+            desktopDropdown.classList.add("hidden");
+          }
+        });
+      </script>
     </section>
     <!--NavBar_Section_End-->
 
@@ -322,22 +344,32 @@
           <div class="">
             <img src="./assets/img/HPR_Global_Logo_bg.png" class="h-[200px] mx-auto" alt="">
             <div class="md:text-left text-center mx-2">
-              <p class="m-4 text-md lg:text-xl text-gray-600 md:leading-[23px]">One of the key aspects of the Foodful Future Program is its focus on impact and sustainability. By utilizing climate-smart agricultural technology and best practices in food storage and preservation, GrainPro is able to help reduce food loss.
+              <p class="m-4 text-md lg:text-xl text-gray-600 md:leading-[23px]">HPR Global is your trusted gateway to premium Indian food products. With a strong foundation in quality and authenticity, we specialize in the export of rice, flours, spices, and a wide range of essential food items. Each product we deliver reflects the richness of India’s agricultural heritage, carefully processed and packed to meet global standards.
+
             </p>
           </div>
           </div>
           <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 grid-cols-1 items-center mx-4">
               <div class="mx-auto items-right md:ml-20 md:text-left text-center">
-              <h3 class="md:text-3xl lg:text-5xl text-lg  font-bold">Our Impact to Date</h3>
-              <p class="text-gray-800 text-lg">We aim to help users reuse, recycle, or upcycle our solutions to help keep the environment clean for future generations.</p>
+              <h3 class="md:text-3xl lg:text-5xl text-lg  font-bold"><span class="text-orange-500">What We Offer</span></h3>
+              <div class="text-black">
+                <p>Top-grade Indian rice (Basmati & Non-Basmati),
+                Freshly milled flours and grains,
+                Aromatic whole and ground spice,
+                Other high-demand Indian food essentials</p>
+              </div>
               <div class="my-2 text-white md:flex-rows flex-col">
-                <button class="px-4  bg-orange-500 rounded-2xl my-2">Impact to Date</button>
-                <button class="px-4 bg-orange-500 rounded-2xl">Impact Report 2024</button>
+                <button
+                class="bg-orange-500 text-white px-4 py-1 rounded-full hover:bg-orange-600 transition"
+                href="./Contact-Us.html"
+              >
+                Contact Us
+              </button>
               </div>
             </div>
             <div class="">
-              <img src="./assets/img/chart.gif" class="lg:h-[500px] md:h-[400px] h-[300px] mx-auto" alt="">
+              <img src="./assets/img/Sell-Product-img.png" class="lg:h-[300px] md:h-[400px] h-[300px] mx-auto" alt="">
             </div>
             </div>
           </div>
@@ -480,85 +512,118 @@
   <!--Slider_Center_Ended-->
 
   <!--Testimonials_start-->
-  <section>
-    <div class="">
+  <section class="bg-[#eeefee]">
+    <div class="bg-[url(./assets/img/stories_top.webp)] ">
     <img src="./assets/img/stories_top.webp" class="mt-2" alt="">
+     <!-- <h3 class="text-center">Our Product</h3> -->
   </div>
-<div class="flex justify-center px-2 p-5 pb-10 bg-[#eeefee]">
-    <div
-      id="slider"
-      class="w-full max-w-6xl mx-auto h-auto overflow-hidden relative"
-    >
-      <!-- Slides -->
+<section class="max-w-7xl  mx-auto px-4 pb-10">
+      <!-- <h1 class="text-3xl font-bold mb-8 text-center">Our Products</h1> -->
       <div
-        class="slide grid md:grid-cols-2 grid-cols-1 items-center gap-6 bg-white rounded-xl shadow-lg p-3 sm:p-6 fade opacity-100 transition-opacity duration-700"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
       >
-        <img
-          src="./assets/img/rice-farm-4.jpg"
-          alt="Slide 1"
-          class="w-full h-auto rounded-lg object-cover"
-        />
-        <div>
-          <p class="text-gray-700">
-            The INVITO green beans arrive in Vancouver in heavy burlap (jute).⁠
-          </p>
-          <h2 class="text-3xl mb-4 text-orange-500">The Roast House</h2>
-          <div class="">
-            <button
-              class="text-orange-500 border-[1px] rounded-2xl border-orange-500 hover:bg-orange-500 hover:text-white px-3 text-sm"
-            >
-              Submit a Testimony
-            </button>
-            <button
-              class="text-orange-500 border-[1px] rounded-2xl border-orange-500 hover:bg-orange-500 hover:text-white px-3 text-sm"
-            >
-              view all
-            </button>
+        <!-- Product Card -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
+          <img
+            src="assets/img/Sell-Product-img.png"
+            alt="1121 Steam Basmati"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-bold mb-1">1121 Basmati sella</h2>
+            <p class="text-sm">
+              <span class="font-semibold">AGL:</span> 8.40 MM
+            </p>
+            <p class="text-sm mb-3">
+              <span class="font-semibold">Elongation:</span> Upto 22 MM
+            </p>
+            <a href="./Contact-Us.html">
+              <button
+                class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
+                href="./Contact-Us.html"
+              >
+                Contact Us
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Repeat Product Cards -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
+          <img
+            src="assets/img/Sell-Product-img.png"
+            alt="1121 Sella Basmati"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-bold mb-1">1121 Basmati Steam</h2>
+            <p class="text-sm">
+              <span class="font-semibold">AGL:</span> 8.35 MM
+            </p>
+            <p class="text-sm mb-3">
+              <span class="font-semibold">Elongation:</span> Upto 16.5 MM
+            </p>
+            <a href="./Contact-Us.html">
+              <button
+                class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
+                href="./Contact-Us.html"
+              >
+                Contact Us
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
+          <img
+            src="assets/img/Sell-Product-img.png"
+            alt="1121 Golden Sella"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-bold mb-1">1718 Basmati Sella</h2>
+            <p class="text-sm">
+              <span class="font-semibold">AGL:</span> 8.30 MM
+            </p>
+            <p class="text-sm mb-3">
+              <span class="font-semibold">Elongation:</span> Upto 16 MM
+            </p>
+            <a href="./Contact-Us.html">
+              <button
+                class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
+                href="./Contact-Us.html"
+              >
+                Contact Us
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
+          <img
+            src="assets/img/Sell-Product-img.png"
+            alt="1121 Golden Sella"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-bold mb-1">1718 Basmati Steam</h2>
+            <p class="text-sm">
+              <span class="font-semibold">AGL:</span> 8.30 MM
+            </p>
+            <p class="text-sm mb-3">
+              <span class="font-semibold">Elongation:</span> Upto 16 MM
+            </p>
+            <a href="./Contact-Us.html">
+              <button
+                class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
+                href="./Contact-Us.html"
+              >
+                Contact Us
+              </button>
+            </a>
           </div>
         </div>
       </div>
-
-      <div
-        class="slide grid md:grid-cols-2 grid-cols-1 items-center gap-6 bg-white rounded-xl shadow-lg p-6 absolute inset-0 fade opacity-0 transition-opacity duration-700"
-      >
-        <img
-          src="./assets/img/rice-farm-2.jpg"
-          alt="Slide 2"
-          class="w-full h-auto rounded-lg object-cover"
-        />
-        <div>
-          <p class="text-gray-700">Special coffees need special care</p>
-          <h2 class="text-3xl mb-4 text-orange-500">Cafe Patrici</h2>
-          <div class="">
-            <button
-              class="text-orange-500 border-[1px] rounded-2xl border-orange-500 hover:bg-orange-500 hover:text-white px-3 text-sm"
-            >
-              Submit a Testimony
-            </button>
-            <button
-              class="text-orange-500 border-[1px] rounded-2xl border-orange-500 hover:bg-orange-500 hover:text-white px-3 text-sm"
-            >
-              view all
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      const slides_2 = document.querySelectorAll(".slide");
-      let index = 0;
-
-      setInterval(() => {
-        slides_2[index].classList.remove("opacity-100");
-        slides_2[index].classList.add("opacity-0");
-
-        index = (index + 1) % slides_2.length;
-
-        slides_2[index].classList.remove("opacity-0");
-        slides_2[index].classList.add("opacity-100");
-      }, 1500);
-    </script>
-  </div>
+    </section>
     <div class="-mt-1">
       <img src="./assets/img/stories_footer.webp" alt="">
     </div>
