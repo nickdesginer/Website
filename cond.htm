@@ -2,44 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>Infinite Text Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .marquee {
+        white-space: nowrap;
+        will-change: transform;
+        animation: scroll-left 10s linear infinite;
+      }
 
-    <!-- Tailwind CSS v3.4.16 CDN -->
-    <script src="./js/tailwindcss3.4.16.js"></script>
-    <script src="./js/libCustom.js"></script>
-
-    <!--JavaScript File-->
-    <!-- <script src="./js/JavaScript.js"></script> -->
-
-    <!-- Font Awosome Icons -->
-    <!-- <script
-      src="https://kit.fontawesome.com/466870e187.js"
-      crossorigin="anonymous"
-    ></script> -->
-
-    <!-- Google Material Icons With Font set -->
-    <link href="./assets/css/material-icons.css" rel="stylesheet" />
-
-    <!-- Custom Styles -->
-    <!-- <link href="./assets/css/styles.css" rel="stylesheet" /> -->
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
   </head>
-  <body class="p-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-bold text-center mb-6">Our Location</h2>
-
-      <div
-        class="w-full h-96 rounded-lg overflow-hidden shadow-lg border border-gray-300"
-      >
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.020053033257!2d-122.4206796846816!3d37.77640857975844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085815d3f2f3f07%3A0xb5eebc6db2b5114!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1634643022305!5m2!1sen!2sus"
-          width="100%"
-          height="100%"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="w-full h-full border-0"
-        ></iframe>
+  <body class="bg-gray-100">
+    <div class="overflow-hidden w-full bg-orange-300">
+      <div class="marquee text-xl font-semibold text-white py-4">
+        🚀 Welcome to our website! | 💡 Explore amazing features | 🔥 Fast,
+        Secure, Reliable | 🎉 Built with Tailwind & JS
       </div>
     </div>
   </body>
