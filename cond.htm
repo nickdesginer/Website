@@ -2,31 +2,225 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Infinite Text Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coconut Information Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .marquee {
-        white-space: nowrap;
-        will-change: transform;
-        animation: scroll-left 10s linear infinite;
-      }
-
-      @keyframes scroll-left {
-        0% {
-          transform: translateX(100%);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
+      html {
+        scroll-behavior: smooth;
       }
     </style>
   </head>
-  <body class="bg-gray-100">
-    <div class="overflow-hidden w-full bg-orange-300">
-      <div class="marquee text-xl font-semibold text-white py-4">
-        🚀 Welcome to our website! | 💡 Explore amazing features | 🔥 Fast,
-        Secure, Reliable | 🎉 Built with Tailwind & JS
-      </div>
-    </div>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-orange-500 text-white text-center py-12 px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">🥥 All About Coconuts</h1>
+      <p class="text-lg max-w-3xl mx-auto">
+        Explore the uses, benefits, varieties, and cultural significance of the
+        versatile coconut – nature's tropical treasure.
+      </p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-10">
+      <!-- Image -->
+      <img
+        src="./assets/img/blog_4.jpg"
+        alt="Coconut"
+        class="rounded-xl w-full h-auto shadow-md"
+      />
+
+      <!-- What Are Coconuts -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🌴 What Is a Coconut?
+        </h2>
+        <p>
+          The coconut is the fruit of the coconut palm (Cocos nucifera), widely
+          grown in tropical regions. It has a fibrous husk, hard shell, white
+          flesh, and nutritious water inside.
+        </p>
+      </section>
+
+      <!-- Varieties -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🌾 Coconut Varieties
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>
+            <strong>Tall Varieties:</strong> Long lifespan, high yield (e.g.,
+            West Coast Tall).
+          </li>
+          <li>
+            <strong>Dwarf Varieties:</strong> Shorter, early-bearing (e.g.,
+            Malayan Dwarf).
+          </li>
+          <li>
+            <strong>Hybrid Varieties:</strong> Crossbred for better quality and
+            production.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Nutritional Value -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🥗 Nutritional Value
+        </h2>
+        <p>
+          Coconut provides healthy fats, especially medium-chain triglycerides
+          (MCTs), and is rich in minerals like potassium, manganese, and copper.
+          It supports energy, digestion, and hydration.
+        </p>
+      </section>
+
+      <!-- Coconut Uses -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🧴 Uses of Coconut
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>
+            <strong>Coconut Water:</strong> Refreshing, natural electrolyte
+            drink.
+          </li>
+          <li>
+            <strong>Coconut Oil:</strong> Used in cooking, cosmetics, and
+            medicine.
+          </li>
+          <li>
+            <strong>Coconut Milk & Cream:</strong> Common in tropical cooking.
+          </li>
+          <li>
+            <strong>Coconut Meat:</strong> Used in curries, sweets, snacks, and
+            baking.
+          </li>
+          <li>
+            <strong>Coconut Shell & Coir:</strong> Used for utensils, fuel, and
+            rope.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Cultural and Religious Role -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🙏 Cultural Significance
+        </h2>
+        <p>
+          In many cultures, the coconut symbolizes purity and prosperity. It is
+          used in religious rituals, weddings, and festivals in India, Southeast
+          Asia, and Polynesia.
+        </p>
+      </section>
+
+      <!-- Health Benefits -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          💪 Health Benefits
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Improves heart health with healthy fats.</li>
+          <li>Boosts energy and metabolism.</li>
+          <li>Hydrates and balances electrolytes.</li>
+          <li>Supports skin and hair health.</li>
+          <li>Promotes digestive well-being.</li>
+        </ul>
+      </section>
+
+      <!-- Coconut Farming -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🌿 Coconut Farming
+        </h2>
+        <p>
+          Coconuts are grown in sandy, well-drained soils in tropical climates.
+          Major producers include India, Indonesia, the Philippines, and Sri
+          Lanka. Trees are harvested year-round.
+        </p>
+      </section>
+
+      <!-- Harvest and Processing -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🌾 Harvesting & Processing
+        </h2>
+        <p>
+          Mature coconuts are cut or dropped manually. After harvest, they’re
+          husked, split, and processed for oil, water, or copra (dried kernel
+          used for extraction).
+        </p>
+      </section>
+
+      <!-- Economic Importance -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          💼 Economic Importance
+        </h2>
+        <p>
+          Coconut and its by-products are vital to rural economies. It supports
+          millions of small farmers and industries producing oil, beverages,
+          cosmetics, and fiber products.
+        </p>
+      </section>
+
+      <!-- Conservation and Sustainability -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          ♻️ Sustainability and Challenges
+        </h2>
+        <p>
+          Coconut farming is eco-friendly but faces challenges like pests, aging
+          trees, and climate change. Solutions include intercropping,
+          disease-resistant varieties, and organic practices.
+        </p>
+      </section>
+
+      <!-- Myths and Misconceptions -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          ❌ Myths About Coconuts
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>
+            “Coconut oil is unhealthy” – actually, it's safe in moderation.
+          </li>
+          <li>
+            “Coconut water cures all diseases” – it helps hydration but is not a
+            miracle cure.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Future of Coconut Industry -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🔮 Future of Coconut
+        </h2>
+        <p>
+          With rising demand for plant-based, natural products, coconut farming
+          and innovation are expected to grow. New product trends include vegan
+          coconut yogurt, snacks, and skincare.
+        </p>
+      </section>
+
+      <!-- Conclusion -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          ✅ Conclusion
+        </h2>
+        <p>
+          Coconuts are more than tropical fruit — they are life-sustaining,
+          multi-use wonders. From nutrition to industry to culture, the coconut
+          continues to enrich lives globally.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center bg-gray-100 py-6 text-sm text-gray-500">
+      © 2025 Coconut Info Blog. All rights reserved.
+    </footer>
   </body>
 </html>
