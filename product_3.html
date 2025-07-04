@@ -233,112 +233,198 @@
         </div>
       </div>
     </section>
-    <section class="max-w-7xl mx-auto px-4 py-10">
-      <h1 class="text-3xl font-bold mb-8 text-center">Our Products</h1>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-      >
-        <!-- Product Card -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
-          <img
-            src="assets/img/Sell-Product-img.png"
-            alt="1121 Steam Basmati"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4">
-            <h2 class="text-lg font-bold mb-1">1121 Basmati sella</h2>
-            <p class="text-sm">
-              <span class="font-semibold">AGL:</span> 8.40 MM
-            </p>
-            <p class="text-sm mb-3">
-              <span class="font-semibold">Elongation:</span> Upto 22 MM
-            </p>
-            <a href="./contact-us.html">
-              <button
-                class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
-                href="./contact-us.html"
-              >
-                Contact Us
-              </button>
-            </a>
-          </div>
-        </div>
+    <section>
+      <!-- =========== PRODUCTS SECTION =========== -->
+      <div class="container max-w-7xl mx-auto px-4 py-12">
+        <h2 class="text-4xl font-bold text-center text-hpr-dark mb-10">
+          Our Products
+        </h2>
 
-        <!-- Repeat Product Cards -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
-          <img
-            src="assets/img/Sell-Product-img.png"
-            alt="1121 Sella Basmati"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4">
-            <h2 class="text-lg font-bold mb-1">1121 Basmati Steam</h2>
-            <p class="text-sm">
-              <span class="font-semibold">AGL:</span> 8.35 MM
-            </p>
-            <p class="text-sm mb-3">
-              <span class="font-semibold">Elongation:</span> Upto 16.5 MM
-            </p>
-            <a href="./contact-us.html">
-              <button
-                class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
-                href="./contact-us.html"
-              >
-                Contact Us
-              </button>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
-          <img
-            src="assets/img/Sell-Product-img.png"
-            alt="1121 Golden Sella"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4">
-            <h2 class="text-lg font-bold mb-1">1718 Basmati Sella</h2>
-            <p class="text-sm">
-              <span class="font-semibold">AGL:</span> 8.30 MM
-            </p>
-            <p class="text-sm mb-3">
-              <span class="font-semibold">Elongation:</span> Upto 16 MM
-            </p>
-            <a href="./contact-us.html">
-              <button
-                class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
-                href="./contact-us.html"
-              >
-                Contact Us
-              </button>
-            </a>
-          </div>
-        </div>
-        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
-          <img
-            src="assets/img/Sell-Product-img.png"
-            alt="1121 Golden Sella"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4">
-            <h2 class="text-lg font-bold mb-1">1718 Basmati Steam</h2>
-            <p class="text-sm">
-              <span class="font-semibold">AGL:</span> 8.30 MM
-            </p>
-            <p class="text-sm mb-3">
-              <span class="font-semibold">Elongation:</span> Upto 16 MM
-            </p>
-            <a href="./contact-us.html">
-              <button
-                class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
-                href="./contact-us.html"
-              >
-                Contact Us
-              </button>
-            </a>
-          </div>
+        <!-- This grid will be populated by JavaScript -->
+        <div
+          id="product-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <!-- Product cards will be inserted here dynamically -->
         </div>
       </div>
+
+      <!-- =========== CONTACT US MODAL =========== -->
+      <!-- The `hidden` class hides it by default -->
+      <div
+        id="contactModal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4"
+      >
+        <div
+          class="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full relative"
+        >
+          <button
+            id="closeModalBtn"
+            class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-3xl font-bold"
+          >
+            &times;
+          </button>
+          <h3 class="text-2xl font-bold text-hpr-dark mb-6">Contact Us</h3>
+          <form id="contactForm">
+            <div class="mb-4">
+              <label
+                for="name"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Your Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                required
+              ></textarea>
+            </div>
+            <div class="flex items-center justify-end">
+              <button
+                type="submit"
+                class="w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 transition-colors"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- =========== JAVASCRIPT LOGIC =========== -->
+      <script>
+        // --- 1. PRODUCT DATA (JSON Object) ---
+        // To add, edit, or remove a product, you only need to change this section.
+        const productsData = [
+          {
+            name: "1121 Basmati Sella",
+            agl: "AGL: 8.40 MM",
+            elongation: "Elongation: Upto 22 MM",
+            logoUrl: "Sell-Product-img.png",
+          },
+          {
+            name: "1121 Basmati Steam",
+            agl: "AGL: 8.35 MM",
+            elongation: "Elongation: Upto 16.5 MM",
+            logoUrl: "Sell-Product-img.png",
+          },
+          {
+            name: "1718 Basmati Sella",
+            agl: "AGL: 8.30 MM",
+            elongation: "Elongation: Upto 16 MM",
+            logoUrl: "Sell-Product-img.png",
+          },
+          {
+            name: "1718 Basmati Steam",
+            agl: "AGL: 8.20 MM",
+            elongation: "Elongation: Upto 16 MM",
+            logoUrl: "Sell-Product-img.png",
+          },
+        ];
+
+        // --- 2. SCRIPT TO RENDER PRODUCTS AND HANDLE MODAL ---
+        document.addEventListener("DOMContentLoaded", () => {
+          const productGrid = document.getElementById("product-grid");
+
+          // Function to create and inject product cards into the DOM
+          function renderProducts() {
+            // Clear existing grid content to avoid duplicates
+            productGrid.innerHTML = "";
+
+            // Loop through the JSON data and create an HTML card for each product
+            productsData.forEach((product) => {
+              const cardHtml = `
+                        <div class="bg-white border border-gray-200 rounded-lg shadow-md text-center p-6 flex flex-col items-center">
+                            <img src="${product.logoUrl}" alt="HPR Global Logo" class="w-64 h-54 mb-4" onerror="this.onerror=null;this.src='assets/img/Sell-Product-img.png';">
+                            <h3 class="text-xl font-semibold text-hpr-dark mb-2">${product.name}</h3>
+                            <p class="text-gray-600 text-sm">${product.agl}</p>
+                            <p class="text-gray-600 text-sm mb-4">${product.elongation}</p>
+                            <button data-product="${product.name}" class="open-modal-btn mt-auto w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 transition-colors">
+                                Contact Us
+                            </button>
+                        </div>
+                    `;
+              productGrid.insertAdjacentHTML("beforeend", cardHtml);
+            });
+          }
+
+          // --- Modal Logic ---
+          const modal = document.getElementById("contactModal");
+          const closeModalBtn = document.getElementById("closeModalBtn");
+          const messageTextarea = document.getElementById("message");
+          const contactForm = document.getElementById("contactForm");
+
+          const openModal = (productName) => {
+            messageTextarea.value = `I'm interested in your product: ${productName}.`;
+            modal.classList.remove("hidden");
+          };
+
+          const closeModal = () => {
+            modal.classList.add("hidden");
+            contactForm.reset();
+          };
+
+          // Event listener for the whole grid container.
+          // This is more efficient than adding a listener to every single button.
+          productGrid.addEventListener("click", (event) => {
+            if (
+              event.target &&
+              event.target.classList.contains("open-modal-btn")
+            ) {
+              const productName = event.target.getAttribute("data-product");
+              openModal(productName);
+            }
+          });
+
+          closeModalBtn.addEventListener("click", closeModal);
+          modal.addEventListener("click", (event) => {
+            if (event.target === modal) closeModal();
+          });
+
+          contactForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("Form submitted!");
+            console.log(
+              "Form data:",
+              Object.fromEntries(new FormData(contactForm))
+            );
+            closeModal();
+          });
+
+          // --- Initial Render ---
+          // Call the function to build the product cards when the page loads
+          renderProducts();
+        });
+      </script>
     </section>
     <button
       onclick="handleFixedButtonClick()"
