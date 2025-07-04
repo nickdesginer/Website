@@ -3,216 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products from JSON</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Coconut Information Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Optional: You can customize the Tailwind theme here
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "hpr-orange": "#F97316",
-              "hpr-dark": "#1E293B",
-            },
-          },
-        },
-      };
-    </script>
     <style>
-      /* Smooth transition for the modal popup */
-      #contactModal {
-        transition: opacity 0.3s ease-in-out;
+      html {
+        scroll-behavior: smooth;
       }
     </style>
   </head>
-  <body class="bg-gray-50 font-sans">
-    <!-- =========== PRODUCTS SECTION =========== -->
-    <div class="container mx-auto px-4 py-12">
-      <h2 class="text-4xl font-bold text-center text-hpr-dark mb-10">
-        Our Products
-      </h2>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-orange-500 text-white text-center py-12 px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">🥥 All About Coconuts</h1>
+      <p class="text-lg max-w-3xl mx-auto">
+        Explore the uses, benefits, varieties, and cultural significance of the
+        versatile coconut – nature's tropical treasure.
+      </p>
+    </header>
 
-      <!-- This grid will be populated by JavaScript -->
-      <div
-        id="product-grid"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-      >
-        <!-- Product cards will be inserted here dynamically -->
-      </div>
-    </div>
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-10">
+      <!-- Image -->
+      <img
+        src="./assets/img/blog_4.jpg"
+        alt="Coconut"
+        class="rounded-xl w-full h-auto shadow-md"
+      />
 
-    <!-- =========== CONTACT US MODAL =========== -->
-    <!-- The `hidden` class hides it by default -->
-    <div
-      id="contactModal"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4"
-    >
-      <div class="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full relative">
-        <button
-          id="closeModalBtn"
-          class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-3xl font-bold"
-        >
-          &times;
-        </button>
-        <h3 class="text-2xl font-bold text-hpr-dark mb-6">Contact Us</h3>
-        <form id="contactForm">
-          <div class="mb-4">
-            <label for="name" class="block text-gray-700 text-sm font-bold mb-2"
-              >Your Name</label
-            >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            />
-          </div>
-          <div class="mb-4">
-            <label
-              for="email"
-              class="block text-gray-700 text-sm font-bold mb-2"
-              >Your Email</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="message"
-              class="block text-gray-700 text-sm font-bold mb-2"
-              >Message</label
-            >
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            ></textarea>
-          </div>
-          <div class="flex items-center justify-end">
-            <button
-              type="submit"
-              class="w-full bg-hpr-orange text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 transition-colors"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+      <!-- What Are Coconuts -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🌴 What Is a Coconut?
+        </h2>
+        <p>
+          The coconut is the fruit of the coconut palm (Cocos nucifera), widely
+          grown in tropical regions. It has a fibrous husk, hard shell, white
+          flesh, and nutritious water inside.
+        </p>
+      </section>
 
-    <!-- =========== JAVASCRIPT LOGIC =========== -->
-    <script>
-      // --- 1. PRODUCT DATA (JSON Object) ---
-      // To add, edit, or remove a product, you only need to change this section.
-      const productsData = [
-        {
-          name: "1121 Basmati Sella",
-          agl: "AGL: 8.40 MM",
-          elongation: "Elongation: Upto 22 MM",
-          logoUrl: "",
-        },
-        {
-          name: "1121 Basmati Steam",
-          agl: "AGL: 8.35 MM",
-          elongation: "Elongation: Upto 16.5 MM",
-          logoUrl: "",
-        },
-        {
-          name: "1718 Basmati Sella",
-          agl: "AGL: 8.30 MM",
-          elongation: "Elongation: Upto 16 MM",
-          logoUrl: "",
-        },
-        {
-          name: "1718 Basmati Steam",
-          agl: "AGL: 8.20 MM",
-          elongation: "Elongation: Upto 16 MM",
-          logoUrl: "",
-        },
-      ];
+      <!-- Varieties -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🌾 Coconut Varieties
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>
+            <strong>Tall Varieties:</strong> Long lifespan, high yield (e.g.,
+            West Coast Tall).
+          </li>
+          <li>
+            <strong>Dwarf Varieties:</strong> Shorter, early-bearing (e.g.,
+            Malayan Dwarf).
+          </li>
+          <li>
+            <strong>Hybrid Varieties:</strong> Crossbred for better quality and
+            production.
+          </li>
+        </ul>
+      </section>
 
-      // --- 2. SCRIPT TO RENDER PRODUCTS AND HANDLE MODAL ---
-      document.addEventListener("DOMContentLoaded", () => {
-        const productGrid = document.getElementById("product-grid");
+      <!-- Nutritional Value -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🥗 Nutritional Value
+        </h2>
+        <p>
+          Coconut provides healthy fats, especially medium-chain triglycerides
+          (MCTs), and is rich in minerals like potassium, manganese, and copper.
+          It supports energy, digestion, and hydration.
+        </p>
+      </section>
 
-        // Function to create and inject product cards into the DOM
-        function renderProducts() {
-          // Clear existing grid content to avoid duplicates
-          productGrid.innerHTML = "";
+      <!-- Coconut Uses -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🧴 Uses of Coconut
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>
+            <strong>Coconut Water:</strong> Refreshing, natural electrolyte
+            drink.
+          </li>
+          <li>
+            <strong>Coconut Oil:</strong> Used in cooking, cosmetics, and
+            medicine.
+          </li>
+          <li>
+            <strong>Coconut Milk & Cream:</strong> Common in tropical cooking.
+          </li>
+          <li>
+            <strong>Coconut Meat:</strong> Used in curries, sweets, snacks, and
+            baking.
+          </li>
+          <li>
+            <strong>Coconut Shell & Coir:</strong> Used for utensils, fuel, and
+            rope.
+          </li>
+        </ul>
+      </section>
 
-          // Loop through the JSON data and create an HTML card for each product
-          productsData.forEach((product) => {
-            const cardHtml = `
-                        <div class="bg-white border border-gray-200 rounded-lg shadow-md text-center p-6 flex flex-col items-center">
-                            <img src="${product.logoUrl}" alt="HPR Global Logo" class="w-64 h-54 mb-4" onerror="this.onerror=null;this.src='assets/img/Sell-Product-img.png';">
-                            <h3 class="text-xl font-semibold text-hpr-dark mb-2">${product.name}</h3>
-                            <p class="text-gray-600 text-sm">${product.agl}</p>
-                            <p class="text-gray-600 text-sm mb-4">${product.elongation}</p>
-                            <button data-product="${product.name}" class="open-modal-btn mt-auto w-full bg-hpr-orange text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 transition-colors">
-                                Contact Us
-                            </button>
-                        </div>
-                    `;
-            productGrid.insertAdjacentHTML("beforeend", cardHtml);
-          });
-        }
+      <!-- Cultural and Religious Role -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🙏 Cultural Significance
+        </h2>
+        <p>
+          In many cultures, the coconut symbolizes purity and prosperity. It is
+          used in religious rituals, weddings, and festivals in India, Southeast
+          Asia, and Polynesia.
+        </p>
+      </section>
 
-        // --- Modal Logic ---
-        const modal = document.getElementById("contactModal");
-        const closeModalBtn = document.getElementById("closeModalBtn");
-        const messageTextarea = document.getElementById("message");
-        const contactForm = document.getElementById("contactForm");
+      <!-- Health Benefits -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          💪 Health Benefits
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Improves heart health with healthy fats.</li>
+          <li>Boosts energy and metabolism.</li>
+          <li>Hydrates and balances electrolytes.</li>
+          <li>Supports skin and hair health.</li>
+          <li>Promotes digestive well-being.</li>
+        </ul>
+      </section>
 
-        const openModal = (productName) => {
-          messageTextarea.value = `I'm interested in your product: ${productName}.`;
-          modal.classList.remove("hidden");
-        };
+      <!-- Coconut Farming -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🌿 Coconut Farming
+        </h2>
+        <p>
+          Coconuts are grown in sandy, well-drained soils in tropical climates.
+          Major producers include India, Indonesia, the Philippines, and Sri
+          Lanka. Trees are harvested year-round.
+        </p>
+      </section>
 
-        const closeModal = () => {
-          modal.classList.add("hidden");
-          contactForm.reset();
-        };
+      <!-- Harvest and Processing -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🌾 Harvesting & Processing
+        </h2>
+        <p>
+          Mature coconuts are cut or dropped manually. After harvest, they’re
+          husked, split, and processed for oil, water, or copra (dried kernel
+          used for extraction).
+        </p>
+      </section>
 
-        // Event listener for the whole grid container.
-        // This is more efficient than adding a listener to every single button.
-        productGrid.addEventListener("click", (event) => {
-          if (
-            event.target &&
-            event.target.classList.contains("open-modal-btn")
-          ) {
-            const productName = event.target.getAttribute("data-product");
-            openModal(productName);
-          }
-        });
+      <!-- Economic Importance -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          💼 Economic Importance
+        </h2>
+        <p>
+          Coconut and its by-products are vital to rural economies. It supports
+          millions of small farmers and industries producing oil, beverages,
+          cosmetics, and fiber products.
+        </p>
+      </section>
 
-        closeModalBtn.addEventListener("click", closeModal);
-        modal.addEventListener("click", (event) => {
-          if (event.target === modal) closeModal();
-        });
+      <!-- Conservation and Sustainability -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          ♻️ Sustainability and Challenges
+        </h2>
+        <p>
+          Coconut farming is eco-friendly but faces challenges like pests, aging
+          trees, and climate change. Solutions include intercropping,
+          disease-resistant varieties, and organic practices.
+        </p>
+      </section>
 
-        contactForm.addEventListener("submit", (event) => {
-          event.preventDefault();
-          alert("Form submitted! (This is a demo).");
-          console.log(
-            "Form data:",
-            Object.fromEntries(new FormData(contactForm))
-          );
-          closeModal();
-        });
+      <!-- Myths and Misconceptions -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          ❌ Myths About Coconuts
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>
+            “Coconut oil is unhealthy” – actually, it's safe in moderation.
+          </li>
+          <li>
+            “Coconut water cures all diseases” – it helps hydration but is not a
+            miracle cure.
+          </li>
+        </ul>
+      </section>
 
-        // --- Initial Render ---
-        // Call the function to build the product cards when the page loads
-        renderProducts();
-      });
-    </script>
+      <!-- Future of Coconut Industry -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          🔮 Future of Coconut
+        </h2>
+        <p>
+          With rising demand for plant-based, natural products, coconut farming
+          and innovation are expected to grow. New product trends include vegan
+          coconut yogurt, snacks, and skincare.
+        </p>
+      </section>
+
+      <!-- Conclusion -->
+      <section>
+        <h2 class="text-2xl font-semibold text-orange-500 mb-2">
+          ✅ Conclusion
+        </h2>
+        <p>
+          Coconuts are more than tropical fruit — they are life-sustaining,
+          multi-use wonders. From nutrition to industry to culture, the coconut
+          continues to enrich lives globally.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center bg-gray-100 py-6 text-sm text-gray-500">
+      © 2025 Coconut Info Blog. All rights reserved.
+    </footer>
   </body>
 </html>
