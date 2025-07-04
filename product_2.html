@@ -345,6 +345,183 @@
           </div>
         </div>
       </div>
+
+      <!-- =========== CONTACT US MODAL =========== -->
+      <!-- The `hidden` class hides it by default -->
+      <div
+        id="contactModal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4"
+      >
+        <div
+          class="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full relative"
+        >
+          <button
+            id="closeModalBtn"
+            class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-3xl font-bold"
+          >
+            &times;
+          </button>
+          <h3 class="text-2xl font-bold text-hpr-dark mb-6">Contact Us</h3>
+          <form id="contactForm">
+            <div class="mb-4">
+              <label
+                for="name"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Your Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                required
+              ></textarea>
+            </div>
+            <div class="flex items-center justify-end">
+              <button
+                type="submit"
+                class="w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 transition-colors"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- =========== JAVASCRIPT LOGIC =========== -->
+      <script>
+        // --- 1. PRODUCT DATA (JSON Object) ---
+        // To add, edit, or remove a product, you only need to change this section.
+        const productsData = [
+          {
+            name: "1121 Basmati Sella",
+            agl: "AGL: 8.40 MM",
+            elongation: "Elongation: Upto 22 MM",
+            logoUrl: "assets/img/product_3.jpg",
+          },
+          {
+            name: "1121 Basmati Steam",
+            agl: "AGL: 8.35 MM",
+            elongation: "Elongation: Upto 16.5 MM",
+            logoUrl: "assets/img/product_1.jpg",
+          },
+          {
+            name: "1718 Basmati Sella",
+            agl: "AGL: 8.30 MM",
+            elongation: "Elongation: Upto 16 MM",
+            logoUrl: "assets/img/product_3.jpg",
+          },
+          {
+            name: "1718 Basmati Steam",
+            agl: "AGL: 8.20 MM",
+            elongation: "Elongation: Upto 16 MM",
+            logoUrl: "assets/img/product_1.jpg",
+          },
+        ];
+
+        // --- 2. SCRIPT TO RENDER PRODUCTS AND HANDLE MODAL ---
+        document.addEventListener("DOMContentLoaded", () => {
+          const productGrid = document.getElementById("product-grid");
+
+          // Function to create and inject product cards into the DOM
+          function renderProducts() {
+            // Clear existing grid content to avoid duplicates
+            productGrid.innerHTML = "";
+
+            // Loop through the JSON data and create an HTML card for each product
+            productsData.forEach((product) => {
+              const cardHtml = `
+                        <div class="bg-white border border-gray-200 rounded-lg shadow-md text-center p-6 flex flex-col items-center">
+                            <img src="${product.logoUrl}" alt="HPR Global Logo" class="w-64 h-54 mb-4" onerror="this.onerror=null;this.src='';">
+                            <h3 class="text-xl font-semibold text-hpr-dark mb-2">${product.name}</h3>
+                            <p class="text-gray-600 text-sm">${product.agl}</p>
+                            <p class="text-gray-600 text-sm mb-4">${product.elongation}</p>
+                            <button data-product="${product.name}" class="open-modal-btn mt-auto w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 transition-colors">
+                                Contact Us
+                            </button>
+                        </div>
+                    `;
+              productGrid.insertAdjacentHTML("beforeend", cardHtml);
+            });
+          }
+
+          // --- Modal Logic ---
+          const modal = document.getElementById("contactModal");
+          const closeModalBtn = document.getElementById("closeModalBtn");
+          const messageTextarea = document.getElementById("message");
+          const contactForm = document.getElementById("contactForm");
+
+          const openModal = (productName) => {
+            messageTextarea.value = `I'm interested in your product: ${productName}.`;
+            modal.classList.remove("hidden");
+          };
+
+          const closeModal = () => {
+            modal.classList.add("hidden");
+            contactForm.reset();
+          };
+
+          // Event listener for the whole grid container.
+          // This is more efficient than adding a listener to every single button.
+          productGrid.addEventListener("click", (event) => {
+            if (
+              event.target &&
+              event.target.classList.contains("open-modal-btn")
+            ) {
+              const productName = event.target.getAttribute("data-product");
+              openModal(productName);
+            }
+          });
+
+          closeModalBtn.addEventListener("click", closeModal);
+          modal.addEventListener("click", (event) => {
+            if (event.target === modal) closeModal();
+          });
+
+          contactForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("Form submitted! (This is a demo).");
+            console.log(
+              "Form data:",
+              Object.fromEntries(new FormData(contactForm))
+            );
+            closeModal();
+          });
+
+          // --- Initial Render ---
+          // Call the function to build the product cards when the page loads
+          renderProducts();
+        });
+      </script>
     </section>
     <button
       onclick="handleFixedButtonClick()"
