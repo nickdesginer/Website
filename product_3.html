@@ -233,68 +233,86 @@
             <div class="text-[18px]">
               <a href="./index.html" class="text-white hover:text-yellow-500"
                 >Home</a
-              ><span class="text-white">Spices</span>
+              ><span class="text-white">/Spices</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="max-w-7xl mx-auto px-4 py-10">
-      <h2 class="text-3xl font-bold text-center mb-10">Our Products</h2>
-      <div
-        id="productContainer"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-      >
-        <!-- Products will be injected here -->
-      </div>
-    </section>
-
-    <section>
+    <div class="text-center my-5">
+      <h3 class="text-4xl font-bold">Our Product</h3>
+    </div>
+    <div
+      id="product-list"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto px-4 pb-5"
+    >
+      <!-- Products will be injected here -->
       <script>
         const products = [
           {
-            title: "1121 Basmati Sella",
-            agl: "8.40 MM",
-            elongation: "Upto 22 MM",
             image: "./assets/img/Sell-Product-img.png",
+            alt: "Product 1",
+            price: "1121, Basmati Rice",
+            name: "",
+            rating: 4,
+            reviews: 10,
           },
           {
-            title: "1121 Basmati Steam",
-            agl: "8.35 MM",
-            elongation: "Upto 16.5 MM",
             image: "./assets/img/Sell-Product-img.png",
+            alt: "Product 2",
+            price: "1121, Basmati Rice",
+            name: "",
+            rating: 3,
+            reviews: 21,
           },
           {
-            title: "1718 Basmati Sella",
-            agl: "8.30 MM",
-            elongation: "Upto 16 MM",
             image: "./assets/img/Sell-Product-img.png",
+            alt: "Product 3",
+            price: "1121, Basmati Rice",
+            name: "",
+            rating: 4,
+            reviews: 52,
           },
           {
-            title: "1718 Basmati Steam",
-            agl: "8.20 MM",
-            elongation: "Upto 16 MM",
             image: "./assets/img/Sell-Product-img.png",
+            alt: "Product 4",
+            price: "1121, Basmati Rice",
+            name: "",
+            rating: 5,
+            reviews: 11,
           },
         ];
 
-        const container = document.getElementById("productContainer");
+        const container = document.getElementById("product-list");
 
         products.forEach((product) => {
-          container.innerHTML += `
-        <div class="bg-white p-4 shadow-md rounded-lg text-center">
-          <img src="${product.image}" alt="${product.title}" class="w-full h-48 object-contain mb-4" />
-          <h3 class="text-lg font-bold">${product.title}</h3>
-          <p>AGL: ${product.agl}</p>
-          <p>Elongation: ${product.elongation}</p>
-          <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded mt-4">
-            <a href="./contact-us.html" target="_blank">Contact Us</a>
-          </button>
+          const stars =
+            "★".repeat(product.rating) + "☆".repeat(5 - product.rating);
+
+          const card = `
+      <div class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative">
+        <img src="${product.image}" alt="${product.alt}" class="mx-auto h-62 object-contain" />
+        <p class="text-xl font-semibold mt-4">${product.price}</p>
+        <p class="mt-2 text-gray-700 text-sm">${product.name}</p>
+        <div class="flex justify-center mt-2 text-yellow-500 text-sm">
+          ${stars}
+          <span class="text-gray-500 ml-1">(${product.reviews})</span>
         </div>
-      `;
+      </div>
+
+    `;
+
+          container.insertAdjacentHTML("beforeend", card);
         });
       </script>
-    </section>
+    </div>
+    <div class="text-center mb-10">
+      <button
+        class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded"
+      >
+        <a href="./contact-us.html" target="_blank">Contact Us</a>
+      </button>
+    </div>
     <button
       onclick="handleFixedButtonClick()"
       class="fixed bottom-6 right-6 z-50 bg-orange-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-orange-700 transition duration-300"
