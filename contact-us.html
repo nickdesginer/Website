@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
 
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+
+
+
     <!-- Tailwind CSS v3.4.16 CDN -->
     <script src="./js/tailwindcss3.4.16.js"></script>
     <script src="./js/libCustom.js"></script>
@@ -219,6 +232,7 @@
     </section>
     <!--NavBar_Section_End-->
     <main class="bg-white">
+      
       <section
         class="bg-[url(/./assets/img/contact_us_01.jpg)] bg-cover bg-center"
       >
@@ -238,6 +252,54 @@
           </div>
         </div>
       </section>
+      <section>
+        <section class="bg-white py-16 px-4 max-w-7xl m-auto" id="contact">
+  <div class="max-w-7xl mx-auto">
+    <!-- Heading -->
+    <h2 class="text-center text-gray-500 font-semibold uppercase tracking-wide mb-2">
+      Information
+    </h2>
+    <h3 class="text-center text-3xl font-bold mb-12">
+      Reach Out To Us
+    </h3>
+
+    <!-- Contact Cards -->
+    <div class="grid md:grid-cols-3 gap-10 text-center">
+      
+      <!-- Phone -->
+      <div class="space-y-4">
+        <div class="flex justify-center">
+          <i class="fa-solid fa-phone text-5xl text-orange-500"></i>
+        </div>
+        <h4 class="font-semibold text-gray-700 uppercase">Phone</h4>
+        <p>India Only<br>+91 9664543116</p>
+        
+      </div>
+
+      <!-- Email -->
+      <div class="space-y-4">
+        <div class="flex justify-center">
+          <i class="fa-solid fa-envelope text-5xl text-orange-500"></i>
+        </div>
+        <h4 class="font-semibold text-gray-700 uppercase">Email</h4>
+        <p>India Only<br>hprglobal06@gmail.com</p>
+        
+      </div>
+
+      <!-- Address -->
+      <div class="space-y-4">
+        <div class="flex justify-center">
+          <i class="fa-solid fa-location-dot text-5xl text-orange-500"></i>
+        </div>
+        <h4 class="font-semibold text-gray-700 uppercase">Address</h4>
+        <p>Surat Gujarat (India)</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      </section>
       <section class="bg-white">
         <div class="grid lg:grid-cols-2 max-w-7xl m-auto items-center">
           <div class="m-auto">
@@ -256,8 +318,7 @@
             <p
               class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-lg"
             >
-              Got a technical issue? Want to send feedback about a beta feature?
-              Need details about our Business plan? Let us know.
+              Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
             </p>
             <!-- Updated Form with FormSubmit -->
             <form
@@ -358,6 +419,7 @@
         ></i
       ></a>
     </button>
+    
     <!--Footer-->
     <footer class="bg-black text-white py-10">
       <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8">
